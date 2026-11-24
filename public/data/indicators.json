@@ -1,1 +1,277 @@
-[{"id":"usle_per_ha","name":"USLE Soil Loss Rate (t/ha)","pillar":"Soil Erosion & Sediment Risk","include":false,"direction":"higher","weight":0.15,"unit":"t/ha","definition":"Potential annual sheet and rill soil loss; baseline erosion pressure.","percentileColumn":"H"},{"id":"usle_Total","name":"USLE Soil Loss Total (t/yr)","pillar":"Soil Erosion & Sediment Risk","include":false,"direction":"higher","weight":0,"unit":"t/yr","definition":"Total modeled annual sheet and rill soil loss.","percentileColumn":"AI"},{"id":"sed_export_per_ha","name":"Sediment Export Rate (t/ha)","pillar":"Soil Erosion & Sediment Risk","include":true,"direction":"higher","weight":2,"unit":"t/ha","definition":"Modeled sediment reaching streams per unit area; baseline pressure.","percentileColumn":"K"},{"id":"sed_export_Total","name":"Sediment Export Total (t/yr)","pillar":"Soil Erosion & Sediment Risk","include":false,"direction":"higher","weight":0.1,"unit":"t/yr","definition":"Total modeled annual sediment delivered to streams.","percentileColumn":"AL"},{"id":"sed_deposition_per_ha","name":"Sediment Deposition Rate (t/ha)","pillar":"Soil Erosion & Sediment Risk","include":true,"direction":"higher","weight":0,"unit":"t/ha","definition":"Modeled sediment deposition per unit area.","percentileColumn":"N"},{"id":"sed_deposition_Total","name":"Sediment Deposition Total (t/yr)","pillar":"Soil Erosion & Sediment Risk","include":false,"direction":"higher","weight":0.05,"unit":"t/yr","definition":"Total modeled annual sediment deposition.","percentileColumn":"AO"},{"id":"avoid_exp_per_ha","name":"Avoided Export Rate (t/ha)","pillar":"Conservation & Retention Benefit","include":true,"direction":"lower","weight":0.05,"unit":"t/ha","definition":"Modeled sediment export avoided by current land cover; retention benefit, not a forecast of restoration gains.","percentileColumn":"Q"},{"id":"avoid_exp_Total","name":"Avoided Export Total (t/yr)","pillar":"Conservation & Retention Benefit","include":false,"direction":"higher","weight":0.05,"unit":"t/yr","definition":"Total modeled avoided sediment export.","percentileColumn":"AR"},{"id":"avoided_erosion_per_ha","name":"Avoided Soil Erosion Rate (t/ha)","pillar":"Conservation & Retention Benefit","include":false,"direction":"higher","weight":0.1,"unit":"t/ha","definition":"Modeled soil erosion avoided by current land cover.","percentileColumn":"T"},{"id":"avoided_erosion_Total","name":"Avoided Soil Erosion Total (t/yr)","pillar":"Conservation & Retention Benefit","include":false,"direction":"higher","weight":0.05,"unit":"t/yr","definition":"Total modeled avoided soil erosion.","percentileColumn":"AU"},{"id":"n_total_export_per_ha","name":"Nitrogen Total Export Rate (kg/ha)","pillar":"Nutrient Loading & Water Quality","include":true,"direction":"higher","weight":0.1,"unit":"kg/ha","definition":"Total nitrogen export per unit area.","percentileColumn":"AC"},{"id":"n_total_export_Total","name":"Nitrogen Total Export Load (kg/yr)","pillar":"Nutrient Loading & Water Quality","include":false,"direction":"higher","weight":0.05,"unit":"kg/yr","definition":"Total nitrogen export load.","percentileColumn":"BD"},{"id":"n_surface_export_per_ha","name":"Nitrogen Surface Export Rate (kg/ha)","pillar":"Nutrient Loading & Water Quality","include":false,"direction":"higher","weight":0.05,"unit":"kg/ha","definition":"Surface nitrogen export per unit area.","percentileColumn":"Z"},{"id":"n_subsurface_export_per_ha","name":"Nitrogen Subsurface Export Rate (kg/ha)","pillar":"Nutrient Loading & Water Quality","include":false,"direction":"higher","weight":0.05,"unit":"kg/ha","definition":"Subsurface nitrogen export per unit area.","percentileColumn":"W"},{"id":"p_surface_export_per_ha","name":"Phosphorus Surface Export Rate (kg/ha)","pillar":"Nutrient Loading & Water Quality","include":true,"direction":"higher","weight":0.1,"unit":"kg/ha","definition":"Surface phosphorus export per unit area.","percentileColumn":"AF"},{"id":"p_surface_export_Total","name":"Phosphorus Surface Export Load (kg/yr)","pillar":"Nutrient Loading & Water Quality","include":false,"direction":"higher","weight":0.1,"unit":"kg/yr","definition":"Total surface phosphorus export load.","percentileColumn":"BG"},{"id":"Deg_Share","name":"Degraded Land Share (% area)","pillar":"Land Condition & Degradation","include":false,"direction":"higher","weight":0,"unit":"% area","definition":"Fraction of mapped land classified as degraded.","percentileColumn":"BJ"},{"id":"Stable_Share","name":"Stable Land Share (% area)","pillar":"Land Condition & Degradation","include":true,"direction":"lower","weight":0,"unit":"% area","definition":"Fraction of mapped land classified as stable.","percentileColumn":"BM"},{"id":"Improving_Share","name":"Improving Land Share (% area)","pillar":"Land Condition & Degradation","include":true,"direction":"lower","weight":0.2,"unit":"% area","definition":"Fraction of mapped land classified as improving.","percentileColumn":"BP"},{"id":"wyield_mn","name":"Water Yield Depth (mm/yr)","pillar":"Water Provision & Hydrology","include":false,"direction":"lower","weight":0.1,"unit":"mm/yr","definition":"Modeled annual water yield depth; not seasonal baseflow.","percentileColumn":"BS"},{"id":"wyield_vol","name":"Water Yield Total Volume (m³/yr)","pillar":"Water Provision & Hydrology","include":false,"direction":"higher","weight":0.05,"unit":"m³/yr","definition":"Modeled total annual water yield volume.","percentileColumn":"BV"}]
+[
+  {
+    "id": "sed_export_per_ha_v03",
+    "name": "Sediment Export Rate (t/ha/yr)",
+    "pillar": "Soil Erosion & Sediment Risk",
+    "include": true,
+    "direction": "higher",
+    "weight": 0.5,
+    "unit": "t/ha/yr",
+    "definition": "Sediment Export Rate (v03 dataset).",
+    "percentileColumn": "H"
+  },
+  {
+    "id": "sed_export_Total_v03",
+    "name": "Sediment Export Total (t/yr)",
+    "pillar": "Soil Erosion & Sediment Risk",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "t/yr",
+    "definition": "Sediment Export Total (v03 dataset).",
+    "percentileColumn": "K"
+  },
+  {
+    "id": "avoided_erosion_AreaHa_v03",
+    "name": "Avoided Erosion Area (ha)",
+    "pillar": "Conservation & Retention Benefit",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "ha",
+    "definition": "Avoided Erosion Area (v03 dataset).",
+    "percentileColumn": "N"
+  },
+  {
+    "id": "avoided_erosion_per_ha_v03",
+    "name": "Avoided Soil Erosion Rate (t/ha/yr)",
+    "pillar": "Conservation & Retention Benefit",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "t/ha/yr",
+    "definition": "Avoided Soil Erosion Rate (v03 dataset).",
+    "percentileColumn": "Q"
+  },
+  {
+    "id": "avoided_export_per_ha_v03",
+    "name": "Avoided Export Rate (t/ha/yr)",
+    "pillar": "Conservation & Retention Benefit",
+    "include": false,
+    "direction": "lower",
+    "weight": 0,
+    "unit": "t/ha/yr",
+    "definition": "Avoided Export Rate (v03 dataset).",
+    "percentileColumn": "T"
+  },
+  {
+    "id": "avoided_export_Total_v03",
+    "name": "Avoided Export Total (t/yr)",
+    "pillar": "Conservation & Retention Benefit",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "t/yr",
+    "definition": "Avoided Export Total (v03 dataset).",
+    "percentileColumn": "W"
+  },
+  {
+    "id": "n_total_export_per_ha_v03",
+    "name": "Nitrogen Total Export Rate (kg/ha/yr)",
+    "pillar": "Nutrient Loading & Water Quality",
+    "include": true,
+    "direction": "higher",
+    "weight": 0.25,
+    "unit": "kg/ha/yr",
+    "definition": "Nitrogen Total Export Rate (v03 dataset).",
+    "percentileColumn": "Z"
+  },
+  {
+    "id": "n_total_export_Total_v03",
+    "name": "Nitrogen Total Export Load (kg/yr)",
+    "pillar": "Nutrient Loading & Water Quality",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "kg/yr",
+    "definition": "Nitrogen Total Export Load (v03 dataset).",
+    "percentileColumn": "AC"
+  },
+  {
+    "id": "p_surface_export_per_ha_v03",
+    "name": "Phosphorus Surface Export Rate (kg/ha/yr)",
+    "pillar": "Nutrient Loading & Water Quality",
+    "include": true,
+    "direction": "higher",
+    "weight": 0.25,
+    "unit": "kg/ha/yr",
+    "definition": "Phosphorus Surface Export Rate (v03 dataset).",
+    "percentileColumn": "AF"
+  },
+  {
+    "id": "p_surface_export_Total_v03",
+    "name": "Phosphorus Surface Export Load (kg/yr)",
+    "pillar": "Nutrient Loading & Water Quality",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "kg/yr",
+    "definition": "Phosphorus Surface Export Load (v03 dataset).",
+    "percentileColumn": "AI"
+  },
+  {
+    "id": "wyield_mn_v03",
+    "name": "Water Yield Depth (mm/yr)",
+    "pillar": "Water Provision & Hydrology",
+    "include": false,
+    "direction": "lower",
+    "weight": 0,
+    "unit": "mm/yr",
+    "definition": "Water Yield Depth (v03 dataset).",
+    "percentileColumn": "AL"
+  },
+  {
+    "id": "wyield_vol_v03",
+    "name": "Water Yield Total Volume (m³/yr)",
+    "pillar": "Water Provision & Hydrology",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "m³/yr",
+    "definition": "Water Yield Total Volume (v03 dataset).",
+    "percentileColumn": "AO"
+  },
+  {
+    "id": "c_storage_bas_per_ha_v03",
+    "name": "Baseline Carbon Density (t C/ha)",
+    "pillar": "Carbon Storage & Climate",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "t C/ha",
+    "definition": "Baseline Carbon Density (v03 dataset).",
+    "percentileColumn": "AR"
+  },
+  {
+    "id": "c_storage_bas_Total_v03",
+    "name": "Baseline Carbon Stock Total (t C)",
+    "pillar": "Carbon Storage & Climate",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "t C",
+    "definition": "Baseline Carbon Stock Total (v03 dataset).",
+    "percentileColumn": "AU"
+  },
+  {
+    "id": "Pop_Total",
+    "name": "Total Population (persons)",
+    "pillar": "Population & Anthropogenic Pressure",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "persons",
+    "definition": "Total Population (v03 dataset).",
+    "percentileColumn": "AX"
+  },
+  {
+    "id": "Pop_per_ha",
+    "name": "Population Density (persons/ha)",
+    "pillar": "Population & Anthropogenic Pressure",
+    "include": true,
+    "direction": "higher",
+    "weight": 0.25,
+    "unit": "persons/ha",
+    "definition": "Population Density (v03 dataset).",
+    "percentileColumn": "BA"
+  },
+  {
+    "id": "Wetland_AreaHa",
+    "name": "Wetland Area (ha)",
+    "pillar": "Wetlands & Land Condition",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "ha",
+    "definition": "Wetland Area (v03 dataset).",
+    "percentileColumn": "BD"
+  },
+  {
+    "id": "Wetland_Share_Watershed",
+    "name": "Wetland Share of Watershed (share)",
+    "pillar": "Wetlands & Land Condition",
+    "include": true,
+    "direction": "higher",
+    "weight": 0.1,
+    "unit": "share",
+    "definition": "Wetland Share of Watershed (v03 dataset).",
+    "percentileColumn": "BG"
+  },
+  {
+    "id": "Degraded_Wetland_AreaHa",
+    "name": "Degraded Wetland Area (ha)",
+    "pillar": "Wetlands & Land Condition",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "ha",
+    "definition": "Degraded Wetland Area (v03 dataset).",
+    "percentileColumn": "BJ"
+  },
+  {
+    "id": "Degraded_Wetland_Share_Watershed",
+    "name": "Degraded Wetland Share of Watershed (share)",
+    "pillar": "Wetlands & Land Condition",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "share",
+    "definition": "Degraded Wetland Share of Watershed (v03 dataset).",
+    "percentileColumn": "BM"
+  },
+  {
+    "id": "Degraded_Wetland_Share_TotalWetland",
+    "name": "Degraded Share of Total Wetland (share)",
+    "pillar": "Wetlands & Land Condition",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "share",
+    "definition": "Degraded Share of Total Wetland (v03 dataset).",
+    "percentileColumn": "BP"
+  },
+  {
+    "id": "Farmed_AreaHa",
+    "name": "Farmed Land Area (ha)",
+    "pillar": "Agriculture & Forest Cover",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "ha",
+    "definition": "Farmed Land Area (v03 dataset).",
+    "percentileColumn": "BS"
+  },
+  {
+    "id": "Farmed_Share_Watershed",
+    "name": "Farmed Land Share of Watershed (share)",
+    "pillar": "Agriculture & Forest Cover",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "share",
+    "definition": "Farmed Land Share of Watershed (v03 dataset).",
+    "percentileColumn": "BV"
+  },
+  {
+    "id": "Forest_AreaHa",
+    "name": "Forest Land Area (ha)",
+    "pillar": "Agriculture & Forest Cover",
+    "include": false,
+    "direction": "higher",
+    "weight": 0,
+    "unit": "ha",
+    "definition": "Forest Land Area (v03 dataset).",
+    "percentileColumn": "BY"
+  },
+  {
+    "id": "Forest_Share_Watershed",
+    "name": "Forest Land Share of Watershed (share)",
+    "pillar": "Agriculture & Forest Cover",
+    "include": true,
+    "direction": "higher",
+    "weight": 0.1,
+    "unit": "share",
+    "definition": "Forest Land Share of Watershed (v03 dataset).",
+    "percentileColumn": "CB"
+  }
+]
